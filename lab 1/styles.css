@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+input{
+    margin: 0;
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+#landscapeMode {
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    color: darkgreen;
+    font-weight: bolder;
+    display: none; /* Hide the landscape mode text by default */
+}
+
+/* Columnar Divs */
+.columnar {
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    font-weight: 700;
+    background-color: #538e98;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid #333; 
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 951px) {
+    h1 {
+        color: red;
+    }
+    .columnar {
+        display: inline-block;
+        width: 18%;
+    }
+
+    #containers {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+}
+
+@media (min-width: 451px) and (max-width: 950px) {
+    h1 {
+        color: purple;
+    }
+    .columnar {
+        display: inline-block;
+        width: 30%;
+        padding-right: 35px;
+        text-align: center;
+    }
+
+    #containers {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    h1 {
+        color: pink;
+        font-size: 26px /* Smaller font size for smaller screens */
+    }
+
+    form {
+        font-size: 0.7rem; /**used rem for scalability and easier maintenance. It adjusts with the root font size*/
+    }
+
+    .columnar {
+        width: 100%;
+        margin: 6px 0;
+        padding: 6px;
+        font-size:0.7rem;
+
+    }
+
+    #landscapeMode {
+        font-size: 0.9rem;
+    }
+
+    #containers {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #main {
+        margin-top: 4rem;
+    }
+
+    form {
+        margin-top: 4rem;
+    }
+}
+
+/* Landscape Mode CSS */
+@media (orientation: landscape) {
+    #landscapeMode {
+        display: block; /* Show the landscape mode text */
+    }
+}
+
+
