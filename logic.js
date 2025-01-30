@@ -1,6 +1,8 @@
 // Function to get element by ID, for shorter code
 const id = (id) => document.getElementById(id);
 
+document.addEventListener('DOMContentLoaded', clearInputs);
+
 
 // Event listener for save button
 id("saveBtn").addEventListener("click", saveData);
@@ -37,12 +39,19 @@ function saveData() {
     // Notify the user that the data has been successfully saved
     alert("Data saved successfully!");
 
-    // Clear the input fields after saving
+    // Clear the input fields after saving 
+    clearInputs();
+    
+    
+
+}
+
+// Function to clear input fields
+clearInputs(){
     id("author").value = "";
     id("email").value = "";
     id("book").value = "";
     id("pageCount").value = "";
-
 }
 
 // Event listener for fetch button
