@@ -2,11 +2,6 @@
 const id = (id) => document.getElementById(id);
 
 
-document.addEventListener("DOMContentLoaded", function() {  
-
-    
-});
-
 // Event listener for save button
 id("saveBtn").addEventListener("click", saveData);
 
@@ -76,3 +71,5 @@ function fetchData(){
         id("welcomeMessage").innerText = "";
     }
 }
+
+
