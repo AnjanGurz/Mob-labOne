@@ -47,7 +47,7 @@ function saveData() {
 }
 
 // Function to clear input fields
-clearInputs(){
+function clearInputs(){
     id("author").value = "";
     id("email").value = "";
     id("book").value = "";
