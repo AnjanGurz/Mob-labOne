@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anjan Gurung: Week 2</title>
+    <title>Anjan Gurung: Week 2 & 3</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="main">
         <h1>CP430 - Mobile Programming</h1>
 
-        <form>
+        <div id="form">
             <div>
                 <label for="author">Author's Name:</label>
                 <input type="text" id="author" placeholder="Enter author's name">
@@ -30,17 +30,28 @@
                 <label for="email">Email Address:</label>
                 <input type="email" id="email" placeholder="Enter email address">
             </div>
-        </form>
+
+            <div id="buttons">
+                <button id="saveBtn">Save</button>
+                <button id="fetchBtn">Fetch</button>
+            </div>
+        </div>
+
+        
 
         <div id="landscapeMode">I am in landscape mode</div>
 
         <div id="containers">
-            <div class="columnar columnar-one">JavaScript</div>
-            <div class="columnar columnar-two">React.js</div>
-            <div class="columnar">Node.js</div>
-            <div class="columnar">MongoDB</div>
-            <div class="columnar columnar-five">Next.js</div>
+            <div id="authorBox" class="columnar columnar-one">JavaScript</div>
+            <div id="bookBox" class="columnar columnar-two">React.js</div>
+            <div id="pageCountBox" class="columnar">Node.js</div>
+            <div id="emailBox" class="columnar">MongoDB</div>
+            <div id="lastBox" class="columnar columnar-five">Next JS</div>
         </div>
+
+        <h2 id="welcomeMessage"></h2>
     </div>
+
+    <script src="./logic.js"></script>
 </body>
 </html>

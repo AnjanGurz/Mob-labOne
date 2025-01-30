@@ -11,7 +11,7 @@ h1 {
 }
 
 /* Form Styling */
-form {
+#form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,6 +48,43 @@ input{
     border: 2px solid #333; 
 }
 
+#buttons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#saveBtn {
+    background-color: #9850a8;
+}
+
+#fetchBtn {
+    background-color: #452c7e;
+}
+
+button:hover {
+    transform: scale(1.05); 
+}
+
+button:focus {
+    outline: none; 
+}
+
+button:active {
+    background-color: #2f4f4f; 
+}
+
+
 /* Media Queries for Responsiveness */
 @media (min-width: 951px) {
     h1 {
@@ -74,6 +111,7 @@ input{
         width: 30%;
         padding-right: 35px;
         text-align: center;
+        word-wrap: break-word;
     }
 
     #containers {
@@ -89,7 +127,7 @@ input{
         font-size: 26px /* Smaller font size for smaller screens */
     }
 
-    form {
+    #form {
         font-size: 0.7rem; /**used rem for scalability and easier maintenance. It adjusts with the root font size*/
     }
 
@@ -117,8 +155,13 @@ input{
         margin-top: 4rem;
     }
 
-    form {
+    #form {
         margin-top: 4rem;
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 12px;
     }
 }
 
