@@ -59,10 +59,10 @@ function fetchData(){
     let pageCount = sessionData.pageCount 
 
     // Load data back into the input box
-    id("author").placeholder = `${author}`;
-    id("email").placeholder = email;
-    id("book").placeholder = book;
-    id("pageCount").placeholder = pageCount;
+    id("author").value = author;
+    id("email").value = email;
+    id("book").value = book;
+    id("pageCount").value = pageCount;
 
     // Display welcome message if book title is available
     if (book) {
